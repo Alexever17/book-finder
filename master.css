@@ -1,9 +1,30 @@
 * {
-  font-family: 'Gentium Basic', serif;
+  font-family: 'Courgette', cursive !important;
 }
 
 body {
   background-image: url("prism/prism/prism.png");
-  min-width: 100vw;
   min-height: 100vh;
+}
+
+h1 {
+  color: white;
+}
+
+main {
+  widows: 100vw;
+  text-align: center;
+  padding: 3%;
+}
+
+.result {
+  padding: 3%;
+}
+
+.uk-search {
+  background-color: white;
+}
+
+.uk-search-icon-flip {
+  color: #999999 !important;
 }
