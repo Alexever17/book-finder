@@ -1,0 +1,9 @@
+* {
+  font-family: 'Gentium Basic', serif;
+}
+
+body {
+  background-image: url("prism/prism/prism.png");
+  min-width: 100vw;
+  min-height: 100vh;
+}
