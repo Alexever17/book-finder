@@ -12,11 +12,12 @@ document.addEventListener("keypress", function (e) {
   }
 })
 
-//saves the value of the search query and starts the fetch process
+//saves the value of the search query, validates it and starts the fetch process
 function search(e) {
   e.preventDefault();
   if (search_input.value != "") {
-    const query = search_input.value;
+    const raw = search_input.value.toLowerCase();
+    const query = raw.replace(/\s/,"+");
     asyncCall(query);
   } else {
     alert("Please type in your search request")
@@ -39,6 +40,9 @@ function display(data) {
   dataArray = data.data.items
   let processedData = [];
   for (let i = 0; i < dataArray.length; i++) {
+    if (dataArray[i].volumeInfo.authors == undefined) { dataArray[i].volumeInfo.authors = ["#Missing Entry#"]}
+    if (dataArray[i].volumeInfo.publisher == undefined) { dataArray[i].volumeInfo.publisher = "#Missing Entry#" }
+    
     const element = `
       <div class="uk-card uk-card-default uk-card-hover uk-grid-collapse uk-child-width-1-2@s" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
