@@ -1,7 +1,3 @@
-* {
-  font-family: 'Courgette', cursive !important;
-}
-
 body {
   background-image: url("prism/prism/prism.png");
   min-height: 100vh;
@@ -9,6 +5,10 @@ body {
 
 h1 {
   color:white;
+}
+
+h1,h2, h3, h4 {
+  font-family: 'Courgette', cursive !important;
 }
 
 main {
