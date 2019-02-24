@@ -9,7 +9,7 @@
   <meta name="author" content="Oleksandr Malakhov">
   <meta property="og:image" content="https://www.bookbusinessmag.com/thumb/?src=/wp-content/uploads/sites/4/2016/01/google-books-750x340.png&w=750&h=340">
   <link rel="icon" href="favicon.gif" type="image/gif" sizes="16x16">
-  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="uikit-3/uikit.css" />
   <script src="uikit-3/uikit.js"></script>
@@ -20,26 +20,27 @@
   <main>
     <h1>Book Finder by Alexever17</h1>
     <div class="uk-margin">
-      <form class="uk-search uk-search-large">
-        <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-        <input class="uk-search-input" type="search" placeholder=" Search...">
+      <form class="uk-search uk-search-large" id="book-search">
+        <a href="" class="uk-search-icon-flip" uk-search-icon id="search-button"></a>
+        <input class="uk-search-input" type="search" placeholder=" Search..." id="search-input">
       </form>
     </div>
   </main>
-  <div class="uk-child-width-expand@s uk-text-center" id="result" uk-grid>
+  <div id="result">
     <div>
-      <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+      <div class="uk-card uk-card-default uk-card-hover uk-card-body">
         <h3 class="uk-card-title">Welcome!</h3>
         <p>Type in your search request and press the search icon. :)</p>
       </div>
     </div>
     <div>
-      <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
-        <h3 class="uk-card-title">Hopefully you will find somethign nice!</h3>
-        <p>A popular search request is "Harry Potter" :)</p>
+      <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+        <h3 class="uk-card-title">Search</h3>
+        <p>Hopefully, you will find something nice. A popular search request is "Harry Potter" :)</p>
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>
 </body>
 

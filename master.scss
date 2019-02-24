@@ -1,24 +1,30 @@
-body {
-  background-image: url("prism/prism/prism.png");
-  min-height: 100vh;
+html {
+   background-image: url("prism/prism/prism.png");
 }
 
 h1 {
   color:white;
 }
 
-h1,h2, h3, h4 {
-  font-family: 'Courgette', cursive !important;
+h1, h2, h3, h4 {
+  font-family: 'Patrick Hand', cursive !important;
+  font-size: 3.3em;
 }
 
 main {
-  widows: 100vw;
   text-align: center;
-  padding: 3%;
+  padding: 3% 3% 0 3%;
 }
 
-.result {
+#result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 3%;
+  &>* {
+    flex-basis: 49%;
+    margin-top: 3%;
+  }
 }
 
 .uk-search {
@@ -27,4 +33,12 @@ main {
 
 .uk-search-icon-flip {
   color: rgb(153, 153, 153) !important;
+}
+
+@media only screen and (max-width: 700px) {
+  #result {
+  &>* {
+    flex-basis: 100%;
+  }
+}
 }
